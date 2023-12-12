@@ -3,15 +3,11 @@ kind: pipeline
 type: kubernetes
 name: default
 
-platform:
-  os: linux
-  arch: arm64
-
 steps:
   - name: greeting
     image: golang
     commands:
-    - ls
+    - lscpu
     settings:
       mtu: 1400
       registry:
