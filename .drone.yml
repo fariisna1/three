@@ -11,7 +11,7 @@ steps:
   - name: greeting
     image: golang
     commands:
-          - ls
+    - ls
     settings:
       mtu: 1400
       registry:
