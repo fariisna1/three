@@ -1,18 +1,15 @@
 ---
 kind: pipeline
-type: docker
+type: kubernetes
 name: default
 
 platform:
   os: linux
   arch: arm64
 
-workspace:
-  path: /app
-
 steps:
-  - name: push to ecr dev
-    image: plugins/ecr
+  - name: greeting
+    image: golang
     commands:
           - ls
     settings:
