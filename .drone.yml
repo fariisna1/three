@@ -101,6 +101,7 @@ steps:
       AWS_SECRET_ACCESS_KEY:
         from_secret: AWS_SECRET_KEY_IFFF
     commands:
+      - lscpu
       - |
         install_packages aria2 ca-certificates unzip
         cat <<EOT >> list.txt
